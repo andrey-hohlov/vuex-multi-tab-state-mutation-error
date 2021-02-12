@@ -7,25 +7,19 @@ Vue.use(Vuex)
 
 export default function createStore() {
   return new Vuex.Store({
-    state: () => ({}),
-    mutations: {},
-    actions: {},
-    modules: {
+    state: {
       user: {
-        state: () => ({
-          name: '',
-        }),
-        mutations: {
-          setName(state, name) {
-            state.name = name;
-          }
-        },
-        actions: {
-          setName({ commit }, name) {
-            commit('setName', name);
-          },
-        },
-        namespaced: true,
+        name: '',
+      },
+    },
+    mutations: {
+      setUserName(state, name) {
+        state.user.name = name;
+      }
+    },
+    actions: {
+      setUserName({ commit }, name) {
+        commit('setUserName', name);
       },
     },
     plugins: [

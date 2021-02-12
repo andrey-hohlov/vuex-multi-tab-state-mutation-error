@@ -4,7 +4,7 @@
     <input
       :value="$store.state.user.name"
       type="text"
-      @input="$store.dispatch('user/setName', $event.target.value)"
+      @input="$store.dispatch('setUserName', $event.target.value)"
     >
   </div>
 </template>
